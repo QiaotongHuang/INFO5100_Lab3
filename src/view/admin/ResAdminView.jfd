@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "form"
+	"i18n.keyPrefix": "ResAdminView"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:52:p, par l {seq {comp button1:::p::p, space :p:45:p, comp label1:::p::p, space s:::p, comp comName:::p:142:p}, par t:l::p {seq l {comp removeAdmin:1::p::p, space :p:47:p, comp label4:::p::p, space :::x, comp deleteAdmin:2::p:201:p}, seq {comp addCom:1::p::p, space :::x, comp label6:::p::p, space s:::p, comp com:2::p:183:p}, seq l {comp removeCom:1::p::p, space :p:12:p, comp label5:::p::p, space :p:22:p, comp deleteCom:2::p:183:p}}}, space ::226:x}}"
+			"$verticalGroup": "par l {seq l {space :p:82:p, par b {comp button1::b:p::p, comp comName::b:p::p, comp label1::b:p::p}, space :p:56:p, par b {comp addCom::b:p::p, comp com::b:p::p, comp label6::b:p::p}, space :p:45:p, par b {comp removeCom::b:p::p, comp deleteCom::b:p::p, comp label5::b:p::p}, space :p:36:p, par b {comp removeAdmin::b:p::p, comp label4::b:p::p, comp deleteAdmin::b:p::p}, space ::130:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comName"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": new FormMessage( null, "ResAdminView.button1.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "check", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "ResAdminView.label1.text" )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "addCom"
+				"text": new FormMessage( null, "ResAdminView.addCom.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addCom", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "removeCom"
+				"text": new FormMessage( null, "ResAdminView.removeCom.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeCom", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "com"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "deleteCom"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "removeAdmin"
+				"text": new FormMessage( null, "ResAdminView.removeAdmin.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeAdmin", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "deleteAdmin"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": new FormMessage( null, "ResAdminView.label4.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": new FormMessage( null, "ResAdminView.label5.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": new FormMessage( null, "ResAdminView.label6.text" )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 765, 500 )
+		} )
+	}
+}

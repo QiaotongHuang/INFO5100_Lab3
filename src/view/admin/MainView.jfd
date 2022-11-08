@@ -1,0 +1,69 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "form"
+	"i18n.keyPrefix": "MainView"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:192:p, par l {seq {comp label4:::p::p, space u:::p, comp community:::p:210:p, space :0:84:x}, seq {par l {comp label1:1::p::p, comp label2:1::p::p}, space ::38:x, par l {comp login:::p:251:p, comp password:::::x}, space ::316:x}, seq l {par l {comp ResAdmin::l:p::p, comp loginButton:::p::p, comp label3:::p::p}, space :p:43:p, par l {seq {comp registerButton:::p::p, space :0:426:x}, seq {comp ComAdmin:::p::p, space ::383:x}}}}}}"
+			"$verticalGroup": "par l {seq l {space :p:69:p, par b {comp label1::b:p::p, comp login::b:p::p}, space :p:28:p, par b {comp label2::b:p::p, comp password::b:p::p}, space :p:58:p, comp label3:::p::p, space :p:33:p, par b {comp ResAdmin::b:p::p, comp ComAdmin::b:p::p}, space s:::p, par b {comp label4::b:p::p, comp community::b:p::p}, space :p:27:p, par b {comp loginButton::b:p::p, comp registerButton::b:p::p}, space ::110:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "MainView.label1.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": new FormMessage( null, "MainView.label2.text" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "login"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "password"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "ResAdmin"
+				"text": new FormMessage( null, "MainView.ResAdmin.text" )
+				"$buttonGroup": new FormReference( "roleSelection" )
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "ComAdmin"
+				"text": new FormMessage( null, "MainView.ComAdmin.text" )
+				"$buttonGroup": new FormReference( "roleSelection" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": new FormMessage( null, "MainView.label3.text" )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "loginButton"
+				"text": new FormMessage( null, "MainView.loginButton.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "registerButton"
+				"text": new FormMessage( null, "MainView.registerButton.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "register", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": new FormMessage( null, "MainView.label4.text" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "community"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 865, 530 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "roleSelection"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 546 )
+		} )
+	}
+}
